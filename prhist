@@ -26,7 +26,7 @@ for(flag in c("-b=", "-m=", "--log", "-h", "-c=")){
 			cat("inputs:\n",
 				'-c=column_names (comma delimmited)["all"]\n',
 				"-b=bin_num [20]\n",
-				"-m=max_height [2]\n",
+				"-m=max_height [20]\n",
 				"--log [default: linear]\n",
 				"input file\n")
 			quit()
