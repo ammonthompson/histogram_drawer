@@ -52,8 +52,8 @@ if(column_names[1] != "all"){
 for( column_num in seq(ncol(vv))){
 	if( is.numeric(vv[,column_num])){
 		if(log & min(vv[,column_num]) >= 0){
-			cat("\n\tcolumn number ", column_num, ", log ", colnames(vv)[column_num], "\n\n")
-                        myhist = hist(log(vv[,column_num]), plot = F, breaks = nbins)
+			cat("\n\tcolumn number ", column_num, ", log_10 ", colnames(vv)[column_num], "\n\n")
+                        myhist = hist(log(vv[,column_num], 10), plot = F, breaks = nbins)
                         max_density = max(myhist$density)
 		}else{
 			cat("\n\tcolumn number ", column_num, ", ", colnames(vv)[column_num], "\n\n")
